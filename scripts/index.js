@@ -4,6 +4,7 @@ function game(ans, numOfRounds) {
     const options = ['rock', 'paper', 'scissors'];
     var playerPoints = 0;
     var computerPoints = 0;
+    var draws = 0;
     var roundWin = '';
     var debug = ans;
     var rounds = 5;
@@ -32,6 +33,7 @@ function game(ans, numOfRounds) {
         console.log('computer chose: ' + computer);
         let diff = player.length - computer.length;
         if (diff === 0) {
+            draws++;
             roundWin = 'draw';
         }
         else if ((diff === -4) || (diff === 3) ||(diff === 1)) {
@@ -56,6 +58,7 @@ function game(ans, numOfRounds) {
     //Results
     console.log('player wins: ' + playerPoints)
     console.log('computer wins: ' + computerPoints)
+    console.log('draws: ' + draws)
 
     if (playerPoints > computerPoints) {
         return 'you won the game';
