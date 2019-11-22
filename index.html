@@ -7,7 +7,18 @@
     <title>Rock Paper Scissors</title>
     <script src="scripts/index.js"></script>
 </head>
-<body>
-    <p>initialized - please go to console - 'F12' on chrome for dev tools</p>
+<body style="text-align: center; background-color: beige;">
+    <h2>initialized - please go to console - 'F12' on chrome for dev tools</h2>
+    <p>the game function takes two optional parameters: 
+        first is a string (rock OR paper OR scissors) - lowercase only -  
+        second is the number of rounds to complete</p>
+    <script>
+        if (game) {
+            console.log('function game(string:autoPlayerAnswer, Number:numberOfRounds) ready')
+        }
+        else {
+            console.log('game function did not load correctly - sources loaded in?')
+        }
+    </script>
 </body>
 </html>
