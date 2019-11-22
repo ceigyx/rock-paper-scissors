@@ -60,7 +60,10 @@ function game(ans, numOfRounds) {
     console.log('computer wins: ' + computerPoints)
     console.log('draws: ' + draws)
 
-    if (playerPoints > computerPoints) {
+    if (playerPoints === computerPoints) {
+        return 'game draw'
+    }
+    else if (playerPoints > computerPoints) {
         return 'you won the game';
     }
     return 'you lost the game';
