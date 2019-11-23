@@ -13,12 +13,12 @@ function game(arg1, arg2) {
 
     //validate & set params
     if (arg1 && arg2) {
-        if (!isNaN(arg1)) {rounds = arg1; playerPreSelect = arg2;}
-        else {playerPreSelect = arg1; rounds = arg2;}
+        if (!isNaN(arg1)) {rounds = arg1; playerPreSelect = arg2.toLowerCase();}
+        else {playerPreSelect = arg1.toLowerCase(); rounds = arg2;}
     }
     else {
         if (arg1 && !isNaN(arg1)) {rounds = arg1;}
-        else {playerPreSelect = arg1}
+        else {playerPreSelect = arg1.toLowerCase();}
     }
 
     //Gameplay input and logic functions
