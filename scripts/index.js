@@ -1,14 +1,25 @@
-function game(ans, numOfRounds) {
+function game(arg1, arg2) {
 
-    //Tracking and Setup
-    const options = ['rock', 'paper', 'scissors'];
+    //Tracking
+    var options = ['rock', 'paper', 'scissors'];
     var playerPoints = 0;
     var computerPoints = 0;
     var draws = 0;
     var roundWin = '';
-    var debug = ans;
+
+    //Params defaults
+    var playerPreSelect = 'none';
     var rounds = 5;
-    if (numOfRounds) { rounds = numOfRounds};
+
+    //validate & set params
+    if (arg1 && arg2) {
+        if (!isNaN(arg1)) {rounds = arg1; playerPreSelect = arg2;}
+        else {playerPreSelect = arg1; rounds = arg2;}
+    }
+    else {
+        if (arg1 && !isNaN(arg1)) {rounds = arg1;}
+        else {playerPreSelect = arg1}
+    }
 
     //Gameplay input and logic functions
     function computerPlay() {
@@ -16,10 +27,10 @@ function game(ans, numOfRounds) {
     }
 
     function playerSelection() {
-        if (options.indexOf(debug) !== -1) {
-            return debug;
+        if (options.indexOf(playerPreSelect) !== -1) {
+            return playerPreSelect;
         }
-        let input = prompt('Choose! - Rock or Paper or Scissors?').toLowerCase();
+        var input = prompt('Choose! - Rock or Paper or Scissors?').toLowerCase();
         while (options.indexOf(input) === -1) {
         input = prompt('Wrong choice, Try again! - Rock or Paper or Scissors?').toLowerCase();
         }
@@ -27,11 +38,11 @@ function game(ans, numOfRounds) {
     }
 
     function playRound() {
-        let player = playerSelection();
-        let computer = computerPlay();
+        var player = playerSelection();
+        var computer = computerPlay();
         console.log('player chose: ' + player);
         console.log('computer chose: ' + computer);
-        let diff = player.length - computer.length;
+        var diff = player.length - computer.length;
         if (diff === 0) {
             draws++;
             roundWin = 'draw';
@@ -56,12 +67,12 @@ function game(ans, numOfRounds) {
     }
 
     //Results
-    console.log('player wins: ' + playerPoints)
-    console.log('computer wins: ' + computerPoints)
-    console.log('draws: ' + draws)
+    console.log('player wins: ' + playerPoints);
+    console.log('computer wins: ' + computerPoints);
+    console.log('draws: ' + draws);
 
     if (playerPoints === computerPoints) {
-        return 'game draw'
+        return 'game draw';
     }
     else if (playerPoints > computerPoints) {
         return 'you won the game';
@@ -69,3 +80,7 @@ function game(ans, numOfRounds) {
     return 'you lost the game';
 
 }
+
+
+//game(10);
+game('rock', 10);
