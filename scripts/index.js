@@ -80,7 +80,3 @@ function game(arg1, arg2) {
     return 'you lost the game';
 
 }
-
-
-//game(10);
-game('rock', 10);
