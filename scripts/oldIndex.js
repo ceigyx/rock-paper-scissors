@@ -1,6 +1,3 @@
-//dom logic
-
-//game logic
 function game(arg1, arg2) {
 
     //Tracking
