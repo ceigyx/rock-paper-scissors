@@ -4,14 +4,24 @@
     padding: 0%;
 }
 
+.center {
+    text-align: center;
+}
+
+.box {
+    border: 2px solid rgb(36, 29, 29);
+    border-radius: 3px;
+}
+
+#title {
+    padding: 5vh;
+}
+
 #main {
     display: grid;
-    grid-gap: 30px;
-    background-color: brown;
+    grid-gap: 10vh;
     grid-auto-rows: 1fr;
-    overflow: hidden;
     grid-template-areas: 
-    ". . . ."
     ". display display ."
     ". display display ."
     ". prompt prompt ."
@@ -19,50 +29,50 @@
 } 
 
 #display {
-    height: 25vh;
+    height: auto;
     display: grid;
-    background-color: green;
+    background-color: lightgreen;
     grid-area: display;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
-.box {
-    border: 1px solid silver;
-    border-radius: 3px;
-}
-
 .score {
-
+    font-size: 2rem;
 }
 
-#player {
-
-}
 
 #info {
-
-}
-
-#game {
-
+    display: grid;
+    grid-template-areas: 
+    ". round roundVal ."
+    ". result resultVal ."
+    ". . . ."
+    ". . . ."
+    ". . . .";
 }
 
 #round {
+    grid-area: round;
+}
 
+#roundVal {
+    grid-area: roundVal;
 }
 
 #result {
-
+    grid-area: result;
 }
 
-#computer {
-
+#resultVal {
+    grid-area: resultVal;
 }
+
 
 #prompt {
-    background-color: grey;
+    height: 10vh;
     grid-area: prompt;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5vw;
     
 }
