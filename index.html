@@ -9,9 +9,27 @@
     <script src="scripts/index.js"></script>
 </head>
 <body>
-    <h1>
-        Test 1
-    </h1>
+    <nav></nav>
+    <div id="main">?
+        <div id="display" class="box">
+            <div id="player" class="box">
+                <p class="score">??</p>
+            </div>
+            <div id="info" class="box">
+                <p id="game"></p>
+                <p id="round"></p>
+                <p id="result"></p>
+            </div>
+            <div id="computer" class="box">
+                <p class="score">??</p>
+            </div>
+        </div>
+        <div id="prompt">
+            <button>ROCK</button>
+            <button>PAPER</button>
+            <button>SCISSORS</button>
+        </div>
+    </div>
     <script>
         if (game) {
             console.log('function game(AutomaticChoice, NUmberOfRounds) ready')

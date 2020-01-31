@@ -4,9 +4,65 @@
     padding: 0%;
 }
 
+#main {
+    display: grid;
+    grid-gap: 30px;
+    background-color: brown;
+    grid-auto-rows: 1fr;
+    overflow: hidden;
+    grid-template-areas: 
+    ". . . ."
+    ". display display ."
+    ". display display ."
+    ". prompt prompt ."
+    ". . . .";
+} 
 
-h1 {
-    background-color: aquamarine;
-    color: chocolate;
-    font-size: large;
+#display {
+    height: 25vh;
+    display: grid;
+    background-color: green;
+    grid-area: display;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.box {
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+
+.score {
+
+}
+
+#player {
+
+}
+
+#info {
+
+}
+
+#game {
+
+}
+
+#round {
+
+}
+
+#result {
+
+}
+
+#computer {
+
+}
+
+#prompt {
+    background-color: grey;
+    grid-area: prompt;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
 }
