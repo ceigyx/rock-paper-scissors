@@ -1,7 +1,11 @@
 //dom logic
 
+
 //game logic
-function game(arg1, arg2) {
+// - game(num of rounds, pre selected player choice)
+// - if game() then use 5 rounds and prompt
+// - if game(number) then use number rounds and prompt
+function game(arg1 = 5, arg2) {
 
     //Tracking
     var options = ['rock', 'paper', 'scissors'];
@@ -15,13 +19,15 @@ function game(arg1, arg2) {
     var rounds = 5;
 
     //validate & set params
-    if (arg1 && arg2) {
-        if (!isNaN(arg1)) {rounds = arg1; playerPreSelect = arg2.toLowerCase();}
-        else {playerPreSelect = arg1.toLowerCase(); rounds = arg2;}
-    }
-    else {
-        if (arg1 && !isNaN(arg1)) {rounds = arg1;}
-        else {playerPreSelect = arg1.toLowerCase();}
+    if ((arg1 !== undefined) || (arg2 !== undefined)) {
+        if (arg1 && arg2) {
+            if (!isNaN(arg1)) {rounds = arg1; playerPreSelect = arg2.toLowerCase();}
+            else {playerPreSelect = arg1.toLowerCase(); rounds = arg2;}
+        }
+        else {
+            if (arg1 && !isNaN(arg1)) {rounds = arg1;}
+            else {playerPreSelect = arg1.toLowerCase();}
+        }
     }
 
     //Gameplay input and logic functions

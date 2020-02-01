@@ -14,12 +14,13 @@
 }
 
 #title {
-    padding: 5vh;
+    padding-bottom: 5vh;
 }
 
 #main {
+    font-size: 25px;
     display: grid;
-    grid-gap: 10vh;
+    grid-gap: 5vh;
     grid-auto-rows: 1fr;
     grid-template-areas: 
     ". display display ."
@@ -37,7 +38,8 @@
 }
 
 .score {
-    font-size: 2rem;
+    font-size: 70px;
+    color: darkblue;
 }
 
 
@@ -69,7 +71,7 @@
 
 
 #prompt {
-    height: 10vh;
+    height: 100px;
     grid-area: prompt;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
